@@ -101,7 +101,7 @@ Read more about [ReadableMap](https://github.com/facebook/react-native/blob/mast
 
 The last step within Java is to register the Module; this happens in the `createNativeModules` of your apps package. If a module is not registered it will not be available from JavaScript.
 
-create a new Java Class named `CustomToastPackage.java` inside `android/app/src/main/java/com/your-app-name/` folder with the content below:
+Create a new Java Class named `CustomToastPackage.java` inside `android/app/src/main/java/com/your-app-name/` folder with the content below:
 
 ```java
 // CustomToastPackage.java
@@ -155,6 +155,8 @@ protected List<ReactPackage> getPackages() {
 
 To make it simpler to access your new functionality from JavaScript, it is common to wrap the native module in a JavaScript module. This is not necessary but saves the consumers of your library the need to pull it off of `NativeModules` each time. This JavaScript file also becomes a good location for you to add any JavaScript side functionality.
 
+create a new JavaScript file named `ToastExample.js` with the content below:
+
 ```javascript
 /**
  * This exposes the native ToastExample module as a JS module. This has a
@@ -175,6 +177,8 @@ import ToastExample from './ToastExample';
 
 ToastExample.show('Awesome', ToastExample.SHORT);
 ```
+
+Please make sure this JavasScript to be the same hierarchy as `ToastExample.js`.
 
 ## Beyond Toasts
 
