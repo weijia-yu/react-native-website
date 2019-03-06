@@ -176,6 +176,13 @@ import ToastExample from './ToastExample';
 ToastExample.show('Awesome', ToastExample.SHORT);
 ```
 
+Note: 
+
+You will need to rebuild your app for changes to take effect in certain situations:
+
++ You have added new resources to your native app's bundle, such as an image in `Images.xcassets` on iOS or the `res/drawable` folder on Android.
++ You have modified native code (Objective-C/Swift on iOS or Java/C++ on Android).
+
 ## Beyond Toasts
 
 ### Callbacks
